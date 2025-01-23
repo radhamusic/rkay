@@ -19,27 +19,6 @@ from config import adminlist
 
 IS_BROADCASTING = False
 
-import asyncio
-
-from pyrogram import filters
-from pyrogram.enums import ChatMembersFilter
-from pyrogram.errors import FloodWait
-
-from SACHIN_MUSIC import app
-from SACHIN_MUSIC.misc import SUDOERS
-from SACHIN_MUSIC.utils.database import (
-    get_active_chats,
-    get_authuser_names,
-    get_client,
-    get_served_chats,
-    get_served_users,
-)
-from SACHIN_MUSIC.utils.decorators.language import language
-from SACHIN_MUSIC.utils.formatters import alpha_to_int
-from config import adminlist
-
-IS_BROADCASTING = False
-
 
 @app.on_message(filters.command("broadcast") & SUDOERS)
 @language
