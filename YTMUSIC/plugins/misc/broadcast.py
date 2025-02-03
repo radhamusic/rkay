@@ -23,6 +23,10 @@ IS_BROADCASTING = False
 @app.on_message(filters.command("broadcast"))
 @language
 async def braodcast_message(client, message, _):
+    if message.from_user.id != OWNER_ID:
+        return await message.reply_text(
+            "» ** • sɪʀғ ʏᴇʜ [⏤‌✧ 𝐏𝚲𝐑𐎉𝚵𝐑](https://t.me/II_Mr_attitude_4_II) ʙʀᴏᴀᴅᴄᴀsᴛ ᴋᴀʀ sᴀᴋᴛᴀ ʜᴀɪ •**\n❍ ᴊᴏɪɴ [⏤‌✧ 𝐏𝚲𝐑𐎉𝚵𝐑](https://t.me/PERCY_SUPPORT) ғᴏʀ ᴘʀᴏᴍᴏ •"
+        )
     global IS_BROADCASTING
     if message.reply_to_message:
         x = message.reply_to_message.id
